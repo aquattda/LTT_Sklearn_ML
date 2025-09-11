@@ -19,13 +19,13 @@ B = 5: Nếu tăng giờ học lên 1 giờ thì số điểm sẽ tăng 5; thê
 **Trong đó:** </br>
 -	β0: hệ số chặn (intercept) giống giá trị kỳ vọng.
 ⟶ Việc tất cả Xi = 0 (siêu hiếm) không có ý nghĩa. Khi nằm ngoài phạm vi dữ liệu thì B0 là ngoại suy (**extrapolation:** dự đoán bên ngoài khoảng đó), muốn B0 có ý nghĩa ta cần center các biến: </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/extrapolatrionpng.png) </br>
 #### 1.2. Biểu đồ: </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/chart_linear_regression.png) </br>
 #### 1.3. Ưu điểm: </br>
 -	Dễ chơi dễ trúng thưởng đối với các bộ data đơn giản và có mối liên hệ x, y là tuyến tính. </br>
 #### 1.4.Nhược điểm:  </br>
 - Tuy nhiên trong các trường hợp phức tạp hơn thì không ai ngu mà chọn linear cả
 **Giả sử:**  </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/chart_linear_regression_difficult.png) </br>
 ⟶ Ta có thể thấy bộ dự liệu rắc rối này không thể đồng bộ thành một đường thẳng có giá trị TB MIN (X, Y quá lệch nhau)
