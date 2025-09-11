@@ -4,7 +4,7 @@
 -	Đây là thuật toán tìm ra mối quan hệ tuyến tính tồn tại **1-N** input X và output Y.
 -	Mối quan hệ tuyến tính là mối quan hệ bậc 1 (y = ax + b) giữa 2 biến X, Y.  </br>
 ⟶ Dựa vào đó để đưa ra kết quả Y dựa vào đầu vào X. </br>
-⟶ Trong đó X là **Independent Variable** (**Feature**) và Y là **Dependent Variable** (**Target**). </br> </br>
+⟶ Trong đó X là **Independent Variable** (**Feature**) và Y là **Dependent Variable** (**Target**). </br>
 #### 1.1. Phân loại input X và bài toán thực tế:
 -	Nếu tồn tại duy nhất một input **X** (**Simple Linear Regression**): Dự đoán mức lương của một nhân viên dựa vào số năm kinh nghiệm của nhân viên đó. </br> 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Simple_Linear.png) </br> 
