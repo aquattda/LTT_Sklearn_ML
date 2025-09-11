@@ -11,8 +11,21 @@
 **Trong đó:** </br>
 A (**Intercept/Bias**): giá trị kỳ vọng của y hay gọi chung là giá trị trung bình khi **X** = 0. </br>
 B (**Slope/ Coefficient**): độ dốc, khi **X** thay đổi một $\Delta X$ thì giá trị kỳ vọng của Y sẽ là $\Delta Y = b \cdot \Delta X$ </br> </br>
-**Giả sử**: Dự đoán điểm thi **Y** = 40 + 5*(giờ học) </br>
+**Giả sử:** Dự đoán điểm thi **Y** = 40 + 5*(giờ học) </br>
 A = 40: Nếu giờ học = 0 thì điểm dự đoán TB là 40 nhưng sẽ có sai số $\varepsilon$.</br>
 B = 5: Nếu tăng giờ học lên 1 giờ thì số điểm sẽ tăng 5; thêm 2 giờ học thì điểm tăng 10; tăng k giờ  học thì điểm tăng 5k. </br>
 -	Nếu tồn tại N input X (**Multiple Linear Regression**): Dự đoán mức lương của một nhân viên dựa vào số năm kinh nghiệm của nhân viên và trình độ học vấn. </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) 
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) </br>
+**Trong đó:** </br>
+-	β0: hệ số chặn (intercept) giống giá trị kỳ vọng.
+⟶ Việc tất cả Xi = 0 (siêu hiếm) không có ý nghĩa. Khi nằm ngoài phạm vi dữ liệu thì B0 là ngoại suy (**extrapolation:** dự đoán bên ngoài khoảng đó), muốn B0 có ý nghĩa ta cần center các biến: </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) </br>
+#### 1.2. Biểu đồ: </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) </br>
+#### 1.3. Ưu điểm: </br>
+-	Dễ chơi dễ trúng thưởng đối với các bộ data đơn giản và có mối liên hệ x, y là tuyến tính. </br>
+#### 1.4.Nhược điểm:  </br>
+- Tuy nhiên trong các trường hợp phức tạp hơn thì không ai ngu mà chọn linear cả
+**Giả sử:**  </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) </br>
+⟶ Ta có thể thấy bộ dự liệu rắc rối này không thể đồng bộ thành một đường thẳng có giá trị TB MIN (X, Y quá lệch nhau)
