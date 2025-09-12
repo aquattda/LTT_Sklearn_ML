@@ -63,7 +63,7 @@ $$
 \text{Cost}_{\mathrm{L1}}
 = \sum_{i=0}^{N}\!\left(y_i-\sum_{j=0}^{M} x_{ij} W_j\right)^2
 + \lambda \sum_{j=0}^{M} \lvert W_j\rvert
-$$
+$$ </br>
 **So sánh Normal & Lasso:** </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 - **Biểu đồ bên trái (chưa Regularization):**
@@ -79,7 +79,7 @@ $$
 \text{Cost}_{\mathrm{L2}}
 = \sum_{i=0}^{N}\!\left(y_i-\sum_{j=0}^{M} x_{ij} W_j\right)^2
 + \lambda \sum_{j=0}^{M} W_j^{2}
-$$
+$$ </br>
 **So sánh Normal & Ridge:** </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 - **Đối với Ridge (L2)**: giảm (shrink) **độ lớn của tất cả hệ số** → hiếm khi bằng 0. </br>
