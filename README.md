@@ -79,8 +79,7 @@ $$
 
 $$
 \text{Cost}_{\mathrm{L2}}
-= \sum_{i=0}^{N}\!\left(y_i-\sum_{j=0}^{M} x_{ij} W_j\right)^2
-+ \lambda \sum_{j=0}^{M} W_j^{2}
+= \sum_{i=0}^{N}\!\left(y_i-\sum_{j=0}^{M} x_{ij} W_j\right)^2 + \lambda \sum_{j=0}^{M} W_j^{2}
 $$
 
 **So sánh Normal & Ridge:** </br>
