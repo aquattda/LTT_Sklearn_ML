@@ -25,7 +25,7 @@ B = 5: Nếu tăng giờ học lên 1 giờ thì số điểm sẽ tăng 5; thê
 #### 1.3. Ưu điểm: </br>
 -	Dễ chơi dễ trúng thưởng đối với các bộ data đơn giản và có mối liên hệ x, y là tuyến tính. </br>
 #### 1.4.Nhược điểm:  </br>
-- Tuy nhiên trong các trường hợp phức tạp hơn thì không ai ngu mà chọn linear cả
+- Tuy nhiên trong các trường hợp phức tạp hơn thì không ai ngu mà chọn linear cả </br>
 **Giả sử:**  </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/chart_linear_regression_difficult.png) </br>
 ⟶ Ta có thể thấy bộ dự liệu rắc rối này không thể đồng bộ thành một đường thẳng có giá trị TB MIN (X, Y quá lệch nhau)
