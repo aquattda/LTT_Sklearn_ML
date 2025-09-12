@@ -59,10 +59,12 @@ Trong sơ đồ này:
 #### 2.3. Regularization cơ bản:
 ##### 2.3.1. Kỹ thuật 1 **(Lasso)**
 - Thành phần **Regulaziation** của trọng số Wj được tính bằng tổng giá trị tuyệt đối. </br>
+
 $$
 \text{Cost}_{\mathrm{L1}}
 = \sum_{i=0}^{N}\!\left(y_i-\sum_{j=0}^{M} x_{ij} W_j\right)^2 + \lambda \sum_{j=0}^{M} \lvert W_j\rvert
 $$ </br>
+
 **So sánh Normal & Lasso:** </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 - **Biểu đồ bên trái (chưa Regularization):**
