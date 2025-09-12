@@ -36,10 +36,12 @@ $B$ = 5: Nếu tăng giờ học lên 1 giờ thì số điểm sẽ tăng 5; th
 - Đây được coi là bản cải tiến của linear do có sự xuất hiện của các phần tử bậc $1, 2, … N$. Sử dụng khi chúng ta muốn biết giá trị $N$ là bao nhiêu.
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/polynomial.jpeg)  </br>
 So sánh Simple linear vs Polynomial Regresstion: </br>
+
 | Simple linear model | Polynomial model |
 |---|---|
 | Chỉ số *X* nằm ở dưới *(subscript)* giúp phân biệt các \(x\) đầu vào khác nhau. | Chỉ số *X* ở phía trên *(superscript)* để nói về **bậc** của \(x\) tương ứng. |
 | Ví dụ: \(x_i, x_j\) | Ví dụ: \(x^2, x^3\) |
+
 #### 2.2 Overfitting
 -	Xảy ra khi độ phức tạp của mô hình > độ phức tạp của dữ liệu </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
