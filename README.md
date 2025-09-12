@@ -7,7 +7,7 @@
 ⟶ Trong đó **X** là **Independent Variable** (**Feature**) và **Y** là **Dependent Variable** (**Target**). </br>
 #### 1.1. Phân loại input X và bài toán thực tế:
 -	Nếu tồn tại duy nhất một input **X** (**Simple Linear Regression**): Dự đoán mức lương của một nhân viên dựa vào số năm kinh nghiệm của nhân viên đó. </br> 
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Simple_Linear.png) </br> 
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Simple_Linear.png) </br>
 **Trong đó:** </br>
 -	A (**Intercept/Bias**): giá trị kỳ vọng của y hay gọi chung là giá trị trung bình khi **X** = 0.
 -	B (**Slope/ Coefficient**): độ dốc, khi **X** thay đổi một $\Delta X$ thì giá trị kỳ vọng của **Y** sẽ là $\Delta Y = b \cdot \Delta X$ </br>
