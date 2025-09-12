@@ -40,7 +40,7 @@ So sánh Simple linear vs Polynomial Regresstion: </br>
 | Simple linear model | Polynomial model |
 |---|---|
 | Chỉ số *X* nằm ở dưới *(subscript)* giúp phân biệt các \(x\) đầu vào khác nhau. | Chỉ số *X* ở phía trên *(superscript)* để nói về **bậc** của \(x\) tương ứng. |
-| Ví dụ: \(x_i, x_j\) | Ví dụ: \(x^2, x^3\) |
+| Ví dụ: ($x_i, x_j$) | Ví dụ: ($x^2, x^3$) |
 
 #### 2.2 Overfitting
 -	Xảy ra khi độ phức tạp của mô hình > độ phức tạp của dữ liệu </br>
