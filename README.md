@@ -35,12 +35,12 @@ $B$ = 5: Nếu tăng giờ học lên 1 giờ thì số điểm sẽ tăng 5; th
 ### 2.	Polynomial Regression (Đa thức)
 - Đây được coi là bản cải tiến của linear do có sự xuất hiện của các phần tử bậc $1, 2, … N$. Sử dụng khi chúng ta muốn biết giá trị $N$ là bao nhiêu.
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/polynomial.jpeg)  </br>
-So sánh Simple linear vs Polynomial Regresstion:
+So sánh Simple linear vs Polynomial Regresstion: </br>
 | Simple linear model | Polynomial model |
 |---|---|
 | • Chỉ số $X$ nằm ở dưới *(subscript)* giúp phân biệt các $x$ đầu vào khác nhau. | • Chỉ số $X$ ở phía trên *(superscript)* để nói về **bậc** của $x$ tương ứng. |
 #### 2.2 Overfitting
--	Xảy ra khi độ phức tạp của mô hình > độ phức tạp của dữ liệu
+-	Xảy ra khi độ phức tạp của mô hình > độ phức tạp của dữ liệu </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 Trong sơ đồ này:
 - Có **6 data points** được huấn luyện bởi **2 mô hình Polynomial** ($N=2$, $N=10$).
@@ -48,7 +48,7 @@ Trong sơ đồ này:
   - Với **$N=10$** *(đường đỏ)*: sai số **train** thấp hơn $N=2$, nhưng khi thêm dữ liệu mới/suy rộng ra **test**, sai số **tăng** (tức khả năng khái quát kém).
 - **$N=10$** đại diện cho **hàm bậc cao** ⇒ mô hình **phức tạp**. </br>
 ⟶ Đây là ví dụ điển hình của **Overfitting**.  
-⟶ **$N$ càng cao** ⇒ **train error** thường **thấp**, nhưng **test error** thường **cao**.
+⟶ **$N$ càng cao** ⇒ **train error** thường **thấp**, nhưng **test error** thường **cao**. </br>
 **Giả sử:** Ở kiểm tra giữa kỳ, sinh viên “học vẹt” đạt điểm rất cao vì cấu trúc bài không đổi.  
 Đến **cuối kỳ**, cấu trúc/bậc phức tạp **thay đổi** ⇒ điểm **giảm**.
 
@@ -58,13 +58,13 @@ Trong sơ đồ này:
 
 #### 2.3. Regularization cơ bản:
 ##### 2.3.1. Kỹ thuật 1 **(Lasso)**
-- Thành phần **Regulaziation** của trọng số Wj được tính bằng tổng giá trị tuyệt đối.
+- Thành phần **Regulaziation** của trọng số Wj được tính bằng tổng giá trị tuyệt đối. </br>
 $$
 \text{Cost}_{\mathrm{L1}}
 = \sum_{i=0}^{N}\!\left(y_i-\sum_{j=0}^{M} x_{ij} W_j\right)^2
 + \lambda \sum_{j=0}^{M} \lvert W_j\rvert
 $$
-**So sánh Normal & Lasso:**
+**So sánh Normal & Lasso:** </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 - **Biểu đồ bên trái (chưa Regularization):**
   - Độ dài đoạn thẳng tỉ lệ với $W_i$. Đoạn càng dài ⇒ feature $X_i$ ảnh hưởng càng mạnh đến output.
@@ -74,19 +74,16 @@ $$
 
 - **Kết luận:** **LASSO (L1)** hay dùng cho **Feature Selection** vì có thể làm nhiều $W_i=0$;
 ##### 2.3.2. Kỹ thuật 2 **(Ridge)**
-- Thành phần regura của trọng số Wj được tính bằng tổng bình phương.
+- Thành phần regura của trọng số Wj được tính bằng tổng bình phương. </br>
 $$
 \text{Cost}_{\mathrm{L2}}
 = \sum_{i=0}^{N}\!\left(y_i-\sum_{j=0}^{M} x_{ij} W_j\right)^2
 + \lambda \sum_{j=0}^{M} W_j^{2}
 $$
-**So sánh Normal & Ridge:**
+**So sánh Normal & Ridge:** </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
--	Đối với ridge thì nó sẽ giảm độ ảnh hưởng của toàn bộ các feature chứ không “ép” như lasso </br>
-⟶ Trong ML ta có thể áp dụng các kỹ thuật regularization trong nhiều bài toán khác nhau kể cả bài toán regression, classification
-
 - **Đối với Ridge (L2)**: giảm (shrink) **độ lớn của tất cả hệ số** → hiếm khi bằng 0. </br>
 ⟶ Trong ML, **regularization** được áp dụng rộng rãi cho cả **regression** lẫn **classification** để kiểm soát độ phức tạp và giảm overfitting.
 ##### 2.3.3. Kỹ thuật 3 **(Elastic Net)**
-- Sự kết hợp giữa L1 & L2
+- Sự kết hợp giữa L1 & L2 </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
