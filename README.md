@@ -17,7 +17,7 @@ B = 5: Nếu tăng giờ học lên 1 giờ thì số điểm sẽ tăng 5; thê
 -	Nếu tồn tại N input X (**Multiple Linear Regression**): Dự đoán mức lương của một nhân viên dựa vào số năm kinh nghiệm của nhân viên và trình độ học vấn. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Multiple_Linear.png) </br>
 **Trong đó:** </br>
--	β0: hệ số chặn (intercept) giống giá trị kỳ vọng.
+-	β0: hệ số chặn (intercept) giống giá trị kỳ vọng. </br>
 ⟶ Việc tất cả Xi = 0 (siêu hiếm) không có ý nghĩa. Khi nằm ngoài phạm vi dữ liệu thì B0 là ngoại suy (**extrapolation:** dự đoán bên ngoài khoảng đó), muốn B0 có ý nghĩa ta cần center các biến: </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/extrapolatrionpng.png) </br>
 #### 1.2. Biểu đồ: </br>
