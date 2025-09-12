@@ -69,7 +69,7 @@ $$
 $$ 
 
 **So sánh Normal & Lasso:** </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/normal%26lasso.png) </br>
 - **Biểu đồ bên trái (chưa Regularization):**
   - Độ dài đoạn thẳng tỉ lệ với $W_i$. Đoạn càng dài ⇒ feature $X_i$ ảnh hưởng càng mạnh đến output.
 
@@ -86,9 +86,9 @@ $$
 $$
 
 **So sánh Normal & Ridge:** </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/normal_ridge.png) </br>
 - **Đối với Ridge (L2)**: giảm (shrink) **độ lớn của tất cả hệ số** → hiếm khi bằng 0. </br>
 ⟶ Trong ML, **regularization** được áp dụng rộng rãi cho cả **regression** lẫn **classification** để kiểm soát độ phức tạp và giảm overfitting.
 ##### 2.3.3. Kỹ thuật 3 **(Elastic Net)**
 - Sự kết hợp giữa L1 & L2 </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Elastic_Net.png) </br>
