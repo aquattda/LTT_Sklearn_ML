@@ -92,7 +92,9 @@ $$
 ##### 2.3.3. Kỹ thuật 3 **(Elastic Net)**
 - Sự kết hợp giữa L1 & L2 </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Elastic_Net.png) </br>
+
 **Tình huống:** Tập trainning $Y$ có giá trị [$-∞, +∞$], và nó phục vụ cho bài toán Linear. Vậy nếu ta muốn áp dụng thuật toán này vô **Classification (Binary Classification)** và nó có giá trị output [$0, 1$].
+
 ### 3.	Logistic Regression
 -	Ý tưởng của bài toán này là thực hiện việc ánh xạ Y sao cho nó nằm trong khoảng [$0, 1$]. Sau đó đặt một giá trị ngưỡng ($p$). Nếu các giá trị output $> p$ thì sẽ ở class số 1 và output $< p$ sẽ ở class 0. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
@@ -111,7 +113,9 @@ $$
     -	Nếu muốn kết hợp logistic regression với các kỹ thuật **Regularzation (Lasso, Ridge, Elastic Net)* => sử dụng tham số *(penalty{‘l1’, ‘l2’, ‘elasticnet’, None}, default=’l2’)* </br>
 
 ⇒ Giải quyết bài toán **Classification (Binary Classification)* khi chỉ có 2 class nhưng target [$0, 1$] </br>
+
 **Tình huống:** Vậy nếu bài toán **Classification** có nhiều hơn 2 class thì sao?
+
 #### 3.1.	Multinomial Logistic Regression
 - Giống như **Linear** thì Logistic cũng có **Multinomia** để giải quyết các bài tonas **Classification** có nhiều hơn 2 class.
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
