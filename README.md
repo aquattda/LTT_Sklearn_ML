@@ -127,7 +127,7 @@ $$
 ⇒ Dựa vào đó nên thuật toán này thường sử dụng giải thích xác xuất và dự đoán dành cho từng class
 
 **Trong Sklearn:**
-    -	Khi sử dụng model **LogisticRegression** nếu có nhiều hơn 2 class thì sẽ tự chuyển đổi thành **Multinomial Logistic Regresstion** 
+-	Khi sử dụng model **LogisticRegression** nếu có nhiều hơn 2 class thì sẽ tự chuyển đổi thành **Multinomial Logistic Regresstion** 
     (use **OneVsRestClassifier**)  
 
 ### 4. Binary Classification
