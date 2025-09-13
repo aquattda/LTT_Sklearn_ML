@@ -118,7 +118,7 @@ $$
 **Tình huống:** Vậy nếu bài toán **Classification** có nhiều hơn 2 class thì sao?
 
 #### 3.1.	Multinomial Logistic Regression
-- Giống như **Linear** thì Logistic cũng có **Multinomia** để giải quyết các bài tonas **Classification** có nhiều hơn 2 class.
+- Giống như **Linear** thì Logistic cũng có **Multinomial** để giải quyết các bài tonas **Classification** có nhiều hơn 2 class.
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 -	Đối với **Multinomial Logistic Regression** nó sẽ sử dụng thuật toán **Softmax Activation Function**.
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
