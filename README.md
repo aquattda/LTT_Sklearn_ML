@@ -125,6 +125,33 @@ $$
 -	Thuật toán này sẽ ánh xạ các dữ liệu là một vector có giá trị $[-∞, +∞]$ ⇒ Các vector có giá trị $[0, 1]$, cuối cùng sẽ chọn **Max Value** làm phần tử cuối </br>
 
 ⇒ Dựa vào đó nên thuật toán này thường sử dụng giải thích xác xuất và dự đoán dành cho từng class
+
 - **Trong Sklearn:**
     -	Khi sử dụng model **LogisticRegression** nếu có nhiều hơn 2 class thì sẽ tự chuyển đổi thành **Multinomial Logistic Regresstion** 
     (use **OneVsRestClassifier**)  
+
+### 4. Binary Classification
+#### 4.1. Bayes Theorem
+- Trong lý thuyết xác suất định lý **Bayes Theorem** là một định lý áp dụng rộng rãi trong DS , ML. Giúp ta tính được xác suất xảy ra ở một sự kiện nào đó, mà biết được một sự kiện khác đã xảy ra. </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+**Tình Huống:**
+- Nếu có một text và cần kiểm tra xem xác suất của đoạn text đó thuộc loại nào. </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+- Trong ảnh, cần kiểm tra xem đoạn text thuộc loại Positive hay Negative. </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+-	Về bản chất thì đoạn text sẽ là các từ riêng lẻ, cho nên cần kiểm tra tỷ lệ % của các từ đó. Rõ ràng chúng ta cần tính một xác suất có điều kiện cho nên dựa vào định lý **Bayes**. </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+-	Khi áp dụng đính lý vào thì sẽ xảy ra vấn đề rằng 3 phép tính đằng sau sẽ phức tạp cho nên cần áp dụng thêm một giả thuyết.  </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+-	Giả thuyết cho rằng nếu các từ được phân chia ở các class riêng biệt thì xác suất của các từ xuất hiện là độc lập với nhau. Nhưng trong thực tế, việc chia các từ độc lập là không hợp lý vì các từ xuất hiện sẽ có mối liên hệ với nhau. Tuy nhiên việc áp dụng giả thuyết này chỉ mang tính chất giúp giải quyết bài toán trở nên dễ dàng hơn. </br>
+#### 4.2. Naive Bayes
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+##### 4.2.1. Multinomial Naive Bayes
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+-	Nếu input đầu vào là các biến rời rạc và giá trị được xác định bằng **số lần xuất hiện trong đoạn text.** </br>
+##### 4.2.2. Bernoulli Naive Bayes
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+-	Nếu input đầu vào là các biến rời rạc và giá trị được xác định bằng **chúng có xuất hiện hay không trong đoạn text.** </br>
+##### 4.2.3. Gaussian Naive Bayes
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+-	Nếu input đầu vào là biến liên tục và có thêm giả thuyết về Bayes. </br>
