@@ -122,7 +122,7 @@ $$
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 -	Đối với **Multinomial Logistic Regression** nó sẽ sử dụng thuật toán **Softmax Activation Function**.
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
--	Thuật toán này sẽ ánh xạ các dữ liệu là một vector có giá trị [$-∞, +∞$] ⇒ Các vector có giá trị [$0, 1$], cuối cùng sẽ chọn **Max Value** làm phần tử cuối </br>
+-	Thuật toán này sẽ ánh xạ các dữ liệu là một vector có giá trị $[-∞, +∞]$ ⇒ Các vector có giá trị $[0, 1]$, cuối cùng sẽ chọn **Max Value** làm phần tử cuối </br>
 
 ⇒ Dựa vào đó nên thuật toán này thường sử dụng giải thích xác xuất và dự đoán dành cho từng class
 - **Trong Sklearn:**
