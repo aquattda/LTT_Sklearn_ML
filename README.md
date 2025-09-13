@@ -134,8 +134,10 @@ $$
 #### 4.1. Bayes Theorem
 - Trong lý thuyết xác suất định lý **Bayes Theorem** là một định lý áp dụng rộng rãi trong DS , ML. Giúp ta tính được xác suất xảy ra ở một sự kiện nào đó, mà biết được một sự kiện khác đã xảy ra. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/bayes.png) </br>
+
 **Tình Huống:**
 - Nếu có một text và cần kiểm tra xem xác suất của đoạn text đó thuộc loại nào. </br>
+
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/clasifier_bayes.png) </br>
 - Trong ảnh, cần kiểm tra xem đoạn text thuộc loại Positive hay Negative. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/clasifier_words.png) </br>
