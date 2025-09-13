@@ -96,23 +96,24 @@ $$
 **Tình huống:** Tập trainning $Y$ có giá trị $[-∞, +∞]$, và nó phục vụ cho bài toán Linear. Vậy nếu ta muốn áp dụng thuật toán này vô **Classification (Binary Classification)** và nó có giá trị output $[0, 1]$.
 
 ### 3.	Logistic Regression
--	Ý tưởng của bài toán này là thực hiện việc ánh xạ Y sao cho nó nằm trong khoảng [$0, 1$]. Sau đó đặt một giá trị ngưỡng ($p$). Nếu các giá trị output $> p$ thì sẽ ở class số 1 và output $< p$ sẽ ở class 0. </br>
+-	Ý tưởng của bài toán này là thực hiện việc ánh xạ Y sao cho nó nằm trong khoảng $[0, 1]$. Sau đó đặt một giá trị ngưỡng ($p$). Nếu các giá trị output $> p$ thì sẽ ở class số 1 và output $< p$ sẽ ở class 0. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 -	Thuật toán **Logistic Regression** dựa vào thuật toán **Linear Regression** tạo ra output và cho output đó đi qua **Sigmoid function**. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
-- Trong đó Z là input đầu vào có giá trị bất kỳ [$-∞, +∞$] ⇒ output có giá trị ($0,1$)
+- Trong đó $Z$ là input đầu vào có giá trị bất kỳ $[-∞, +∞]$ ⇒ output có giá trị ($0,1$)
 - Do ý tưởng của thuật toán **Logistic regression** áp dụng giải thuật **Linear regression** mà thuật toán **Linear regression** là một hàm bậc 1 ($ax + b$) cho nên đối với **Logistic Regression* thì $Z$ sẽ thay đổi theo. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 - Thứ tự thực hiện:
     -	Đầu tiên sẽ chạy thuật toán **Linear regression** sau đó tìm ra được các output.
     -	Lấy các output đó sử dụng **Sigmoid function** tạo ra output mới là $0.85$.
     -	Sử dụng **Logistic regression** so sánh giá trị output mới đi so sánh với giá trị ngưỡng ($0.5$)
+      
 **LƯU Ý:**
     -	Tuy thuật toán **Logistic Regression** có chữ **Regression** nhưng đây là thuật toán để thực hiện bài toán **classification**
 - **Trong Sklearn:**
-    -	Nếu muốn kết hợp logistic regression với các kỹ thuật **Regularzation (Lasso, Ridge, Elastic Net)* => sử dụng tham số *(penalty{‘l1’, ‘l2’, ‘elasticnet’, None}, default=’l2’)* </br>
+    -	Nếu muốn kết hợp logistic regression với các kỹ thuật **Regularzation (Lasso, Ridge, Elastic Net)** => sử dụng tham số *(penalty{‘l1’, ‘l2’, ‘elasticnet’, None}, default=’l2’)* </br>
 
-⇒ Giải quyết bài toán **Classification (Binary Classification)* khi chỉ có 2 class nhưng target [$0, 1$] </br>
+⇒ Giải quyết bài toán **Classification (Binary Classification)* khi chỉ có 2 class nhưng target $[0, 1]$ </br>
 
 **Tình huống:** Vậy nếu bài toán **Classification** có nhiều hơn 2 class thì sao?
 
