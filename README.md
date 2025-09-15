@@ -173,7 +173,9 @@ $$
 - Dựa vào độ lệch của các leaf node để xác định, nếu độ lệch tương đối cần phải phân nhánh tiếp. Ngược lại, ta dựa vào đó mà đưa ra quyết định. </br>
 So sánh độ lệch:
  - Table </br>
+ 
 **TÌNH HUỐNG:** Trong thực tế, việc phân chia này phụ thuộc vào việc phân chia các feature phù hợp để tối ưu level của cây và độ lệch lớn nhất. Có rất nhiều cách để giúp ta xác định được việc lựa chọn các feature phù hợp. Một trong những cách phổ biến là dựa vào **Gini Impurity** và **Information Gain (Entropy)** </br>
+
 #### 5.1. Gini Inpurity
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 Trong đó:
@@ -184,8 +186,8 @@ Trong đó:
 - Gini [$0, 0.5$] ⇒ Feature làm cho leaf node bị phân chia cao (độ lệch lớn)
 - Gini [$> 0.5$] ⇒ Feature làm cho leaf node bị phân chia thấp (độ lệch nhỏ) </br>
 
-**Giả sử:** Áp dụng thuật toán giải quyết bài toán cho vay ngân hàng </br>
-
+**GIẢ SỬ:** Áp dụng thuật toán giải quyết bài toán cho vay ngân hàng </br>
+ 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
  - Đối với Age[Youth]: 
     - Yes(2) ~ Pi = 0.4
@@ -204,7 +206,7 @@ Trong đó:
 **Nhược điểm:** 
 - Dễ bị **Overfitting** ( đặc biệt là cây quá nhiều bậc)	 
 - Chỉ một thay đổi nhỏ của dữ liệu sẽ ảnh hưởng lớn đến cấu trúc của toàn bộ cây.
-- Tuy **Desition Tree** có thể sử dụng cho **Regresstion or Classification** nhưng trong thực tế không nên sử dụng với **Regresstion** vì rất khó để tìm được khoảng cách TB đối với **Overfitting** và **Underfitting**. </br>
+⇒ Tuy **Desition Tree** có thể sử dụng cho **Regresstion or Classification** nhưng trong thực tế không nên sử dụng với **Regresstion** vì rất khó để tìm được khoảng cách TB đối với **Overfitting** và **Underfitting**. </br>
 #### 5.3. Underfitting
 -	Đây là hiện tượng đối lập với **Overfitting**. Tức là độ phức tạp của dữ liệu > mô hình </br>
 => Mô hình không đủ để tổng quát hóa xu hướng </br>
