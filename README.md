@@ -158,6 +158,67 @@ $$
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 -	Nếu input đầu vào là biến liên tục và có thêm giả thuyết về Bayes. </br>
 
+**Tình huống:** Ta đã học các thuật toán về hồi quy và phân loại bây giờ ta sẽ học các thuật toán áp dụng cho cả 2 thuật toán này </br>
+
+### 5. Decision Tree
+-	Mở đầu là một thuật toán dễ giải thích và trực quan nhất trong ML </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+**Giả sử:** Áp dụng thuật toán giải quyết bài toán tuyển nhân viên. </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+- Dựa vào độ lệch của các leaf node để xác định, nếu độ lệch tương đối cần phải phân nhánh tiếp. Ngược lại, ta dựa vào đó mà đưa ra quyết định. </br>
+So sánh độ lệch:
+ - Table </br>
+**Tình Huống:** Trong thực tế, việc phân chia này phụ thuộc vào việc phân chia các feature phù hợp để tối ưu level của cây và độ lệch lớn nhất. Có rất nhiều cách để giúp ta xác định được việc lựa chọn các feature phù hợp. Một trong những cách phổ biến là dựa vào **Gini Impurity** và **Information Gain (Entropy)** </br>
+#### 5.1. Gini Inpurity
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+Trong đó:
+-	C: là tổng số lượng class trong Target
+-	Pi là xác suất của một phần tử thuộc về class i
+
+Trường hợp:
+- Gini [$0, 0.5$] ⇒ Feature làm cho leaf node bị phân chia cao (độ lệch lớn)
+- Gini [$> 0.5$] ⇒ Feature làm cho leaf node bị phân chia thấp (độ lệch nhỏ) </br>
+**Giả sử:** Áp dụng thuật toán giải quyết bài toán cho vay ngân hàng </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+ - Đối với Age[Youth]: 
+    - Yes(2) ~ Pi = 0.4
+    - No(3) ~ Pi = 0.6 
+</br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+- Sau khi có Gini ta cần tính Mean của các Gini đó.
+
+⇒ Các Mean(Gini) thấp nhất sẽ chọn best feature. </br>
+#### 5.2. Infomation Gain (Entropy)
+- Đây là một chỉ số khác để xác định các best decision node.
+- Thực hiện việc tìm các ngưỡng tách (trên feature) làm sao cho độ hỗn tạp của nhãn sau khi tách giảm nhiều nhất. </br>
+- Công thức markdown </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+**Nhược điểm:** 
+- Dễ bị **Overfitting** ( đặc biệt là cây quá nhiều bậc)	 
+- Chỉ một thay đổi nhỏ của dữ liệu sẽ ảnh hưởng lớn đến cấu trúc của toàn bộ cây.
+- Tuy **Desition Tree** có thể sử dụng cho **Regresstion or Classification** nhưng trong thực tế không nên sử dụng với **Regresstion** vì rất khó để tìm được khoảng cách TB đối với **Overfitting** và **Underfitting**. </br>
+#### 5.3. Underfitting
+-	Đây là hiện tượng đối lập với **Overfitting**. Tức là độ phức tạp của dữ liệu > mô hình </br>
+=> Mô hình không đủ để tổng quát hóa xu hướng </br>
+
+**Tình Huống:**
+-	Việc sử dụng **Decision Tree** một mình khiến độ chính xác không cao, nên cần kết hợp nhiều **Decision Tree** lại với nhau để gia tăng độ chính xác </br>
+
+### 6. Random Forest (Dừng ngẫu nhiên)
+#### 6.1. Classification
+- Đối với bài toán **Classification** thì cách thức kết hợp là sử dụng **Majority vote**. 
+##### 6.1.1. Majority Vote
+- Các vote nhiều nhất của từng **Decision** sẽ được chọn vào **Final Prediction** (Dự đoán cuối) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+**Giả Sử:** Ứng dụng vào bài toán phân loại chó, mèo. </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+#### 6.2. Regression
+- Đối với bài toán **Regression** thì sẽ sử dụng **Averaging**. </br>
+##### 6.2.1. Averaging
+- Lấy giá trị trung bình của các Decision Tree sẽ được cho vào **Final Prediction** (Dự đoán cuối) </br>
+
+**Giả Sử:** Ứng dụng vào bài toán mật độ ảnh hưởng ABC. </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 
 
 
