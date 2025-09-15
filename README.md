@@ -42,7 +42,7 @@ So sánh Simple linear vs Polynomial Regresstion: </br>
 | Chỉ số *X* nằm ở dưới *(subscript)* giúp phân biệt các \(x\) đầu vào khác nhau. | Chỉ số *X* ở phía trên *(superscript)* để nói về **bậc** của \(x\) tương ứng. |
 | Ví dụ: ($x_i, x_j$) | Ví dụ: ($x^2, x^3$) |
 
-#### 2.2 Overfitting
+#### 2.1. Overfitting
 -	Xảy ra khi độ phức tạp của mô hình > độ phức tạp của dữ liệu </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 Trong sơ đồ này:
@@ -59,8 +59,8 @@ Trong sơ đồ này:
 
 ⟶ Khi triển khai, cần **tối thiểu hoá sai số** giữa dự đoán và thực tế **đồng thời** **kiểm soát độ phức tạp mô hình** ⇒ **Regularization (Điều chuẩn)**.
 
-#### 2.3. Regularization cơ bản:
-##### 2.3.1. Kỹ thuật 1 **(Lasso)**
+#### 2.2. Regularization cơ bản:
+##### 2.2.1. Kỹ thuật 1 **(Lasso)**
 - Thành phần **Regulaziation** của trọng số Wj được tính bằng tổng giá trị tuyệt đối. </br>
 
 $$
@@ -77,7 +77,7 @@ $$
   - Trọng số bị **thu nhỏ** về gần 0; một số **bị ép đúng 0** (ví dụ $j=0$ và $j=5$) ⇒ các feature tương ứng **không còn ảnh hưởng** đến output.
 
 - **Kết luận:** **LASSO (L1)** hay dùng cho **Feature Selection** vì có thể làm nhiều $W_i=0$;
-##### 2.3.2. Kỹ thuật 2 **(Ridge)**
+##### 2.2.2. Kỹ thuật 2 **(Ridge)**
 - Thành phần regura của trọng số Wj được tính bằng tổng bình phương. </br>
 
 $$
@@ -89,7 +89,7 @@ $$
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/normal_ridge.png) </br>
 - **Đối với Ridge (L2)**: giảm (shrink) **độ lớn của tất cả hệ số** → hiếm khi bằng 0. </br>
 ⟶ Trong ML, **regularization** được áp dụng rộng rãi cho cả **regression** lẫn **classification** để kiểm soát độ phức tạp và giảm overfitting.
-##### 2.3.3. Kỹ thuật 3 **(Elastic Net)**
+##### 2.2.3. Kỹ thuật 3 **(Elastic Net)**
 - Sự kết hợp giữa L1 & L2 </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Elastic_Net.png) </br>
 
