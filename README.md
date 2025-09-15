@@ -11,7 +11,8 @@
 **Trong đó:** </br>
 -	A (**Intercept/Bias**): giá trị kỳ vọng của y hay gọi chung là giá trị trung bình khi **X** = 0.
 -	B (**Slope/ Coefficient**): độ dốc, khi **X** thay đổi một $\Delta X$ thì giá trị kỳ vọng của **Y** sẽ là $\Delta Y = b \cdot \Delta X$ </br>
-**Giả sử**: Dự đoán điểm thi **Y** = 40 + 5*(giờ học) </br>
+
+**GIẢ SỬ**: Dự đoán điểm thi **Y** = 40 + 5*(giờ học) </br>
 $A$ = 40: Nếu giờ học = 0 thì điểm dự đoán TB là 40 nhưng sẽ có sai số $\varepsilon$.</br>
 $B$ = 5: Nếu tăng giờ học lên 1 giờ thì số điểm sẽ tăng 5; thêm 2 giờ học thì điểm tăng 10; tăng $k$ giờ  học thì điểm tăng 5k. </br>
 
@@ -52,8 +53,9 @@ Trong sơ đồ này:
 - **$N=10$** đại diện cho **hàm bậc cao** ⇒ mô hình **phức tạp**. </br>
 ⟶ Đây là ví dụ điển hình của **Overfitting**.  
 ⟶ **$N$ càng cao** ⇒ **train error** thường **thấp**, nhưng **test error** thường **cao**. </br>
-**Giả sử:** Ở kiểm tra giữa kỳ, sinh viên “học vẹt” đạt điểm rất cao vì cấu trúc bài không đổi.  
-Đến **cuối kỳ**, cấu trúc/bậc phức tạp **thay đổi** ⇒ điểm **giảm**.
+
+**GIẢ SỬ:** Ở kiểm tra giữa kỳ, sinh viên “học vẹt” đạt điểm rất cao vì cấu trúc bài không đổi.  
+Đến **cuối kỳ**, cấu trúc/bậc phức tạp **thay đổi** ⇒ điểm **giảm**. </br>
 
 ⟶ Đây là ví dụ điển hình của **overfitting**: học thuộc “đề cũ” nhưng **khái quát hoá** kém trên đề mới.
 
@@ -76,7 +78,7 @@ $$
 - **Biểu đồ bên phải (đã Regularization):**
   - Trọng số bị **thu nhỏ** về gần 0; một số **bị ép đúng 0** (ví dụ $j=0$ và $j=5$) ⇒ các feature tương ứng **không còn ảnh hưởng** đến output.
 
-- **Kết luận:** **LASSO (L1)** hay dùng cho **Feature Selection** vì có thể làm nhiều $W_i=0$;
+**KẾT LUẬN:** **LASSO (L1)** hay dùng cho **Feature Selection** vì có thể làm nhiều $W_i=0$;
 ##### 2.2.2. Kỹ thuật 2 **(Ridge)**
 - Thành phần regura của trọng số Wj được tính bằng tổng bình phương. </br>
 
@@ -93,7 +95,7 @@ $$
 - Sự kết hợp giữa L1 & L2 </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/Elastic_Net.png) </br>
 
-**Tình huống:** Tập trainning $Y$ có giá trị $[-∞, +∞]$, và nó phục vụ cho bài toán Linear. Vậy nếu ta muốn áp dụng thuật toán này vô **Classification (Binary Classification)** và nó có giá trị output $[0, 1]$.
+**TÌNH HUỐNG:** Tập trainning $Y$ có giá trị $[-∞, +∞]$, và nó phục vụ cho bài toán Linear. Vậy nếu ta muốn áp dụng thuật toán này vô **Classification (Binary Classification)** và nó có giá trị output $[0, 1]$.
 
 ### 3.	Logistic Regression
 -	Ý tưởng của bài toán này là thực hiện việc ánh xạ Y sao cho nó nằm trong khoảng $[0, 1]$. Sau đó đặt một giá trị ngưỡng ($p$). Nếu các giá trị output $> p$ thì sẽ ở class số 1 và output $< p$ sẽ ở class 0. </br>
@@ -109,13 +111,14 @@ $$
     -	Sử dụng **Logistic regression** so sánh giá trị output mới đi so sánh với giá trị ngưỡng ($0.5$)
       
 **LƯU Ý:** </br>
--	Tuy thuật toán **Logistic Regression** có chữ **Regression** nhưng đây là thuật toán để thực hiện bài toán **classification**
-- **Trong Sklearn:**
-    -	Nếu muốn kết hợp logistic regression với các kỹ thuật **Regularzation (Lasso, Ridge, Elastic Net)** => sử dụng tham số *(penalty{‘l1’, ‘l2’, ‘elasticnet’, None}, default=’l2’)* </br>
+-	Tuy thuật toán **Logistic Regression** có chữ **Regression** nhưng đây là thuật toán để thực hiện bài toán **classification** </br>
+
+**Trong Sklearn:**
+-	Nếu muốn kết hợp logistic regression với các kỹ thuật **Regularzation (Lasso, Ridge, Elastic Net)** => sử dụng tham số *(penalty{‘l1’, ‘l2’, ‘elasticnet’, None}, default=’l2’)* </br>
 
 ⇒ Giải quyết bài toán **Classification (Binary Classification)* khi chỉ có 2 class nhưng target $[0, 1]$ </br>
 
-**Tình huống:** Vậy nếu bài toán **Classification** có nhiều hơn 2 class thì sao?
+**TÌNH HUỐNG:** Vậy nếu bài toán **Classification** có nhiều hơn 2 class thì sao?
 
 #### 3.1.	Multinomial Logistic Regression
 - Giống như **Linear** thì Logistic cũng có **Multinomial** để giải quyết các bài tonas **Classification** có nhiều hơn 2 class. </br>
@@ -135,7 +138,7 @@ $$
 - Trong lý thuyết xác suất định lý **Bayes Theorem** là một định lý áp dụng rộng rãi trong DS , ML. Giúp ta tính được xác suất xảy ra ở một sự kiện nào đó, mà biết được một sự kiện khác đã xảy ra. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/bayes.png) </br>
 
-**Tình Huống:**
+**TÌNH HUỐNG:**
 - Nếu có một text và cần kiểm tra xem xác suất của đoạn text đó thuộc loại nào. </br>
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/clasifier_bayes.png) </br>
@@ -158,41 +161,46 @@ $$
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 -	Nếu input đầu vào là biến liên tục và có thêm giả thuyết về Bayes. </br>
 
-**Tình huống:** Ta đã học các thuật toán về hồi quy và phân loại bây giờ ta sẽ học các thuật toán áp dụng cho cả 2 thuật toán này </br>
+**TÌNH HUỐNG:** Ta đã học các thuật toán về hồi quy và phân loại bây giờ ta sẽ học các thuật toán áp dụng cho cả 2 thuật toán này </br>
 
 ### 5. Decision Tree
 -	Mở đầu là một thuật toán dễ giải thích và trực quan nhất trong ML </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
-**Giả sử:** Áp dụng thuật toán giải quyết bài toán tuyển nhân viên. </br>
+
+**GIẢ SỬ:** Áp dụng thuật toán giải quyết bài toán tuyển nhân viên. </br>
+
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 - Dựa vào độ lệch của các leaf node để xác định, nếu độ lệch tương đối cần phải phân nhánh tiếp. Ngược lại, ta dựa vào đó mà đưa ra quyết định. </br>
 So sánh độ lệch:
  - Table </br>
-**Tình Huống:** Trong thực tế, việc phân chia này phụ thuộc vào việc phân chia các feature phù hợp để tối ưu level của cây và độ lệch lớn nhất. Có rất nhiều cách để giúp ta xác định được việc lựa chọn các feature phù hợp. Một trong những cách phổ biến là dựa vào **Gini Impurity** và **Information Gain (Entropy)** </br>
+**TÌNH HUỐNG:** Trong thực tế, việc phân chia này phụ thuộc vào việc phân chia các feature phù hợp để tối ưu level của cây và độ lệch lớn nhất. Có rất nhiều cách để giúp ta xác định được việc lựa chọn các feature phù hợp. Một trong những cách phổ biến là dựa vào **Gini Impurity** và **Information Gain (Entropy)** </br>
 #### 5.1. Gini Inpurity
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 Trong đó:
 -	C: là tổng số lượng class trong Target
 -	Pi là xác suất của một phần tử thuộc về class i
 
-Trường hợp:
+**Trường hợp:**
 - Gini [$0, 0.5$] ⇒ Feature làm cho leaf node bị phân chia cao (độ lệch lớn)
 - Gini [$> 0.5$] ⇒ Feature làm cho leaf node bị phân chia thấp (độ lệch nhỏ) </br>
+
 **Giả sử:** Áp dụng thuật toán giải quyết bài toán cho vay ngân hàng </br>
+
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
  - Đối với Age[Youth]: 
     - Yes(2) ~ Pi = 0.4
-    - No(3) ~ Pi = 0.6 
-</br>
+    - No(3) ~ Pi = 0.6
+
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 - Sau khi có Gini ta cần tính Mean của các Gini đó.
 
 ⇒ Các Mean(Gini) thấp nhất sẽ chọn best feature. </br>
 #### 5.2. Infomation Gain (Entropy)
-- Đây là một chỉ số khác để xác định các best decision node.
+- Đây là một chỉ số khác để xác định các best **Decision Node**.
 - Thực hiện việc tìm các ngưỡng tách (trên feature) làm sao cho độ hỗn tạp của nhãn sau khi tách giảm nhiều nhất. </br>
 - Công thức markdown </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+
 **Nhược điểm:** 
 - Dễ bị **Overfitting** ( đặc biệt là cây quá nhiều bậc)	 
 - Chỉ một thay đổi nhỏ của dữ liệu sẽ ảnh hưởng lớn đến cấu trúc của toàn bộ cây.
@@ -201,7 +209,7 @@ Trường hợp:
 -	Đây là hiện tượng đối lập với **Overfitting**. Tức là độ phức tạp của dữ liệu > mô hình </br>
 => Mô hình không đủ để tổng quát hóa xu hướng </br>
 
-**Tình Huống:**
+**TÌNH HUỐNG:**
 -	Việc sử dụng **Decision Tree** một mình khiến độ chính xác không cao, nên cần kết hợp nhiều **Decision Tree** lại với nhau để gia tăng độ chính xác </br>
 
 ### 6. Random Forest (Dừng ngẫu nhiên)
@@ -210,14 +218,16 @@ Trường hợp:
 ##### 6.1.1. Majority Vote
 - Các vote nhiều nhất của từng **Decision** sẽ được chọn vào **Final Prediction** (Dự đoán cuối) </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
-**Giả Sử:** Ứng dụng vào bài toán phân loại chó, mèo. </br>
+
+**GIẢ SỬ:** Ứng dụng vào bài toán phân loại chó, mèo. </br>
+
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 #### 6.2. Regression
 - Đối với bài toán **Regression** thì sẽ sử dụng **Averaging**. </br>
 ##### 6.2.1. Averaging
 - Lấy giá trị trung bình của các Decision Tree sẽ được cho vào **Final Prediction** (Dự đoán cuối) </br>
 
-**Giả Sử:** Ứng dụng vào bài toán mật độ ảnh hưởng ABC. </br>
+**GIẢ SỬ:** Ứng dụng vào bài toán mật độ ảnh hưởng ABC. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 
 
