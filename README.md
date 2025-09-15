@@ -108,8 +108,8 @@ $$
     -	Lấy các output đó sử dụng **Sigmoid function** tạo ra output mới là $0.85$.
     -	Sử dụng **Logistic regression** so sánh giá trị output mới đi so sánh với giá trị ngưỡng ($0.5$)
       
-**LƯU Ý:**
-    -	Tuy thuật toán **Logistic Regression** có chữ **Regression** nhưng đây là thuật toán để thực hiện bài toán **classification**
+**LƯU Ý:** </br>
+-	Tuy thuật toán **Logistic Regression** có chữ **Regression** nhưng đây là thuật toán để thực hiện bài toán **classification**
 - **Trong Sklearn:**
     -	Nếu muốn kết hợp logistic regression với các kỹ thuật **Regularzation (Lasso, Ridge, Elastic Net)** => sử dụng tham số *(penalty{‘l1’, ‘l2’, ‘elasticnet’, None}, default=’l2’)* </br>
 
