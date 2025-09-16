@@ -171,8 +171,26 @@ $$
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 - Dựa vào độ lệch của các leaf node để xác định, nếu độ lệch tương đối cần phải phân nhánh tiếp. Ngược lại, ta dựa vào đó mà đưa ra quyết định. </br>
-So sánh độ lệch:
- - Table </br>
+
+So sánh độ lệch: </br>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align:center">Độ lệch lớn</th>
+      <th colspan="2" style="text-align:center">Độ lệch nhỏ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center"><b>80, 20</b></td>
+      <td style="text-align:center"><b>50, 250</b></td>
+      <td style="text-align:center"><b>120, 80</b></td>
+      <td style="text-align:center"><b>100, 200</b></td>
+    </tr>
+  </tbody>
+</table>
+
  
 **TÌNH HUỐNG:** Trong thực tế, việc phân chia này phụ thuộc vào việc phân chia các feature phù hợp để tối ưu level của cây và độ lệch lớn nhất. Có rất nhiều cách để giúp ta xác định được việc lựa chọn các feature phù hợp. Một trong những cách phổ biến là dựa vào **Gini Impurity** và **Information Gain (Entropy)** </br>
 
