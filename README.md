@@ -257,10 +257,10 @@ Trong đó:
 **TÌNH HUỐNG:** Vậy làm thế nào để training các bộ dữ liệu khác nhau? </br>
 #### 6.3. Boostrapping
 -	Đây là kỹ thuật lấy từ mẫu gốc ban đầu sẽ lấy mẫu còn lại nhiều lần để tạo ra nhiều bộ dữ liệu con khác nhau, mỗi Subset sẽ được huấn luyện cho từng Decision tree </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/boostrapping.png) </br>
 
 **GIẢ SỬ:**
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](github.com/aquattda/LTT_Sklearn_ML/blob/main/images/boostrapping_ex.png) </br>
 
 Bảng so sánh Decision Tree & Random Forest:
 
@@ -277,7 +277,7 @@ Bảng so sánh Decision Tree & Random Forest:
 ## 7. Support Vector Machine
 -	Đây là một thuật toán phức tạp trong Basic ML.
 -	Mục tiêu cho bài toán Classification là tìm ra một đường phân cách tốt nhất để phân chia các điểm dữ liệu thuộc về các class khác nhau trong không gian đa chiều </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/SVM.png) </br>
 -	Trong ảnh là Binary Classification đối với 2 class (Tròn, Sao) trong không gian 2 chiều. 
 - Đường màu hồng là đường phân cách tối ưu vì nó thỏa 2 điều kiện:
     - cách đều margin (lề) của 2 class.
@@ -295,7 +295,7 @@ Bảng so sánh Decision Tree & Random Forest:
 -	Không phải lúc nào dữ liệu cũng phân chia tuyến tính. Giả sử vector 2 chiều, thì không phải lúc nào cũng tìm đường một đường thẳng để phân chia các điểm dữ liệu
 
 ⟶ Áp dụng kỹ thuật **Kernel Trick** sẽ đưa dữ liệu từ không gian ít chiều sang không gian nhiều chiều, giúp phân chia dễ dàng hơn một cách tuyến tính
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/kernel_trick.png) </br>
 
 **LƯU Ý:**
 -	Hyperplane (Siêu phẳng): Tùy thuộc vào không gian thì Hypterplane sẽ có hình dạng khác nhau.
