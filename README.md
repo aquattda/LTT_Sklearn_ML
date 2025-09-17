@@ -355,7 +355,7 @@ TỰ TÌM HIỂU HOẶC TÌM XEM CÓ  VIDEO HƯỚNG DẪN
 -	Các thuật toán đều là thuật toán đơn lẻ, ngoại lệ là Random Forest dùng tổng hợp các Decision Tree lại với nhau.
 -	Việc áp dụng các mô hình đơn giản có độ chính xác thấp thành mô hình phức tạp có độ chính xác cao 
 
-
+## II. Ensemble Learning (Tổng hợp)
 
 
 
