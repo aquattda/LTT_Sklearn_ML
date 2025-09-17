@@ -313,5 +313,50 @@ Bảng so sánh Decision Tree & Random Forest:
 **TRONG SKLEAR:**
 -	Sẽ có Class dành cho 2 bài toán sklearn.svm.SVC và  sklearn.svm.SVR
 
+**TÌNH HUỐNG:** Vậy Kernel Trick là gì? Làm thế nào mà có thể thay đổi chiều không gian của dữ liệu.  Lý do sau khi sử dụng Kernel Trick thì lại dễ dàng phân chia dữ liệu tuyến tính 
+
+TỰ TÌM HIỂU HOẶC TÌM XEM CÓ  VIDEO HƯỚNG DẪN 
+
+**All algorithms until now:** Các thuật toán từ trước đến giờ đều tuân theo một motip chung (model  ML, dataset nhằm tìm ra một đường phân cách giúp chia các data point về các class khác nhau) đường phân cách (hyperplane) sẽ có hình dạng khác nhau tùy thuộc vào ML.
+
+-> Tìm được công thức của hyperplane và trong tương lai sẽ sử dụng hyperplane để dự đoán các class cho data point (chưa thấy bao giờ)
+
+**TÌNH HUỐNG:** Vậy có thuật toán nào không cần thông qua training mà trực tiếp sử dụng data point vào quá trình dự đoán?
+
+## 8. K-Nearest Neighbors
+-	Không như các model ML khác, thuật toán này sử dụng trực tiếp data point trong dataset đi dự đoán các data point mới.
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/k_nearest.png) </br>
+
+**LƯU Ý:**
+-	K quyết định “độ rộng lân cận”
+-	Việc chọn K là số lẻ để tránh hòa (tie) khi bỏ phiếu
+    - K = 4 (even): 2-2  
+    - K = 3 (odd): 1-2, 2-1
+
+| **Overfitting (k = 1, 3, …)** | **Underfitting (k = 31, 53, …, N)** |
+|---|---|
+| Độ phức tạp cao, dựa vào ít điểm lân cận <br> ⇒ Nhiễu/Outlier ⇒ Test error tăng | Độ phức tạp nhỏ, lấy TB trên vùng rộng <br> ⇒ bias tăng ⇒ Test error cao |
+
+=> Nếu sử dụng trọng số khoảng cách (weights='distance') trong đa lớp hoặc dò K bằng cross-validation thì K even hay odd không còn quan trọng (giảm rủi ro tie) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/k_nearest_k.png) </br>
+-	Sau khi xác định được K thì nếu data point đó thuộc nhiều phía class nào nhất thì nó sẽ là data point của class đó
+
+**LƯU Ý:**
+-	Tương tự như Decision tree thì KNN cần kết hợp nhiều data point lại để gia tăng độ chính xác và 2 bài toán Classification hay Regression thì đều sử dụng giống DT
+
+**NHƯỢC ĐIỂM:**
+-	Không ổn định, chậm đối với các dataset lớn có nhiều data point, tốn thời gian và tài nguyên khi tính toán.
+-> Vì mỗi data point cần phải tìm khoảng cách từ data point này với tất cả các data point trong data train
+
+**TRONG SKLEAR:**
+-	Sẽ có Class dành cho 2 bài toán sklearn.neighbors.KNeighborsClassifier và sklearn. neighbors.KneighborsRegressor
+
+**TÌNH HUỐNG:** 
+-	Các thuật toán đều là thuật toán đơn lẻ, ngoại lệ là Random Forest dùng tổng hợp các Decision Tree lại với nhau.
+-	Việc áp dụng các mô hình đơn giản có độ chính xác thấp thành mô hình phức tạp có độ chính xác cao 
+
+
+
+
 
 
