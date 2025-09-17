@@ -158,18 +158,18 @@ $$
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/bernoulli_naive.png) </br>
 -	Nếu input đầu vào là các biến rời rạc và giá trị được xác định bằng **chúng có xuất hiện hay không trong đoạn text.** </br>
 ##### 4.2.3. Gaussian Naive Bayes
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/GaussianNaiveBayes.png) </br>
 -	Nếu input đầu vào là biến liên tục và có thêm giả thuyết về Bayes. </br>
 
 **TÌNH HUỐNG:** Ta đã học các thuật toán về hồi quy và phân loại bây giờ ta sẽ học các thuật toán áp dụng cho cả 2 thuật toán này </br>
 
 ### 5. Decision Tree
 -	Mở đầu là một thuật toán dễ giải thích và trực quan nhất trong ML </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/decision_tree.png) </br>
 
 **GIẢ SỬ:** Áp dụng thuật toán giải quyết bài toán tuyển nhân viên. </br>
 
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/decision_tree_ex.png) </br>
 - Dựa vào độ lệch của các leaf node để xác định, nếu độ lệch tương đối cần phải phân nhánh tiếp. Ngược lại, ta dựa vào đó mà đưa ra quyết định. </br>
 
 So sánh độ lệch: </br>
@@ -195,7 +195,7 @@ So sánh độ lệch: </br>
 **TÌNH HUỐNG:** Trong thực tế, việc phân chia này phụ thuộc vào việc phân chia các feature phù hợp để tối ưu level của cây và độ lệch lớn nhất. Có rất nhiều cách để giúp ta xác định được việc lựa chọn các feature phù hợp. Một trong những cách phổ biến là dựa vào **Gini Impurity** và **Information Gain (Entropy)** </br>
 
 #### 5.1. Gini Inpurity
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/gini_impurity.png) </br>
 Trong đó:
 -	C: là tổng số lượng class trong Target
 -	Pi là xác suất của một phần tử thuộc về class i
@@ -206,20 +206,20 @@ Trong đó:
 
 **GIẢ SỬ:** Áp dụng thuật toán giải quyết bài toán cho vay ngân hàng </br>
  
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/gini_bank.png) </br>
  - Đối với Age[Youth]: 
     - Yes(2) ~ Pi = 0.4
     - No(3) ~ Pi = 0.6
 
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
-- Sau khi có Gini ta cần tính Mean của các Gini đó.
-
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/gini_bank_math.png) </br>
+- Sau khi có Gini ta cần tính Mean của các Gini đó. </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/gini_bank_mean.png) </br>
 ⇒ Các Mean(Gini) thấp nhất sẽ chọn best feature. </br>
 #### 5.2. Infomation Gain (Entropy)
 - Đây là một chỉ số khác để xác định các best **Decision Node**.
 - Thực hiện việc tìm các ngưỡng tách (trên feature) làm sao cho độ hỗn tạp của nhãn sau khi tách giảm nhiều nhất. </br>
 - Công thức markdown </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/entropy.png) </br>
 
 **Nhược điểm:** 
 - Dễ bị **Overfitting** ( đặc biệt là cây quá nhiều bậc)	 
