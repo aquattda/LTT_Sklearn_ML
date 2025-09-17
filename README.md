@@ -250,18 +250,67 @@ Trong đó:
 **GIẢ SỬ:** Ứng dụng vào bài toán mật độ ảnh hưởng ABC. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 
+**LƯU Ý:**
+-	Nếu chỉ training trên một bộ dữ liệu thì dự đoán sẽ giống nhau, cho nên để **Random Forest** có ý nghĩa thì mỗi **Decision Tree** cần phải training các bộ dữ liệu khác nhau để đa dạng kết quả trả về.
 
+**TÌNH HUỐNG:** Vậy làm thế nào để training các bộ dữ liệu khác nhau? </br>
+#### 6.3. Boostrapping
+-	Đây là kỹ thuật lấy từ mẫu gốc ban đầu sẽ lấy mẫu còn lại nhiều lần để tạo ra nhiều bộ dữ liệu con khác nhau, mỗi Subset sẽ được huấn luyện cho từng Decision tree </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 
+**GIẢ SỬ:**
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 
+Bảng so sánh Decision Tree & Random Forest:
 
+| **Tiêu chí** | **Decision Tree (DT)** | **Random Forest (RF)** |
+|---|---|---|
+| **Chọn feature ở mỗi node** | Chọn **best** trong **tất cả** feature. | Chọn **best** trong **tập con ngẫu nhiên** các feature. |
+| **Ví dụ minh hoạ** | Best trong **4** feature. | Best trong **3** feature ngẫu nhiên (từ **4**). |
+| **Mục đích/hiệu ứng** | — | **Tăng đa dạng** giữa các cây & dự đoán. |
+| **Overfitting** | — | **Ít bị overfitting hơn.** |
+| **Độ chính xác thực tế** | — | **Cao hơn DT**, được nhiều người ưa chuộng. |
+| **Mức độ giải thích** | **Cao** (dễ truy vết đường đi từ Root node → leaf node). | **Thấp hơn DT**; sau khi có dự đoán cuối vẫn có thể giải thích nhưng khó khăn. |
+| **Tài nguyên & thời gian** | — | **Tiêu tốn hơn DT** (tài nguyên & thời gian). |
 
+## 7. Support Vector Machine
+-	Đây là một thuật toán phức tạp trong Basic ML.
+-	Mục tiêu cho bài toán Classification là tìm ra một đường phân cách tốt nhất để phân chia các điểm dữ liệu thuộc về các class khác nhau trong không gian đa chiều </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+-	Trong ảnh là Binary Classification đối với 2 class (Tròn, Sao) trong không gian 2 chiều. 
+- Đường màu hồng là đường phân cách tối ưu vì nó thỏa 2 điều kiện:
+    - cách đều margin (lề) của 2 class.
+    - margin của đường phân cách tối ưu này tạo ra là tối đa.
+-	Trong SVM thì các điểm thuộc các class gần với đường tối ưu nhất gọi là Support vector, vì chúng sẽ xác định công thức.
 
+⟶ Các đường phân cách (**Hyperplane**) và đường phân cách tối ưu (**Optimal hyperplane**)
 
+**GIẢ SỬ:** Dựa vào bài toán Linear Regression là vector 2 chiều ($y= ax+b$) thì các điểm này sẽ quyết định a và b là bao nhiêu.
 
+**LƯU Ý:** Trong dữ liệu thực tế thì có 2 tình huống mà SVM phải đổi mặt.
+-	Không phải lúc nào SVM cũng tìm đường phân cách tối ưu để phân chia hoàn toàn các điểm dữ liệu mà không sai sót.
 
+⟶ Thiết lập giá trị **Hyperparameter(C)** sẽ đặt một ngưỡng chấp nhận sai sót nếu thỏa dưới ngưỡng
+-	Không phải lúc nào dữ liệu cũng phân chia tuyến tính. Giả sử vector 2 chiều, thì không phải lúc nào cũng tìm đường một đường thẳng để phân chia các điểm dữ liệu
 
+⟶ Áp dụng kỹ thuật **Kernel Trick** sẽ đưa dữ liệu từ không gian ít chiều sang không gian nhiều chiều, giúp phân chia dễ dàng hơn một cách tuyến tính
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
 
+**LƯU Ý:**
+-	Hyperplane (Siêu phẳng): Tùy thuộc vào không gian thì Hypterplane sẽ có hình dạng khác nhau.
+    - Đối với không gian 2 chiều: Đường thẳng
+    - Đối với không gian 3 chiều: Mặt phẳng
+    
+⟶ Số chiều của Hyperplane < số chiều không gian + 1
 
+**ƯU ĐIỂM:**
+-	Có performance cao và làm việc tốt với dữ liệu nhiều chiều. Bản thân SVM đã đưa dữ liệu ít chiều sang không gian nhiều chiều
+
+**NHƯỢC ĐIỂM:**
+-	Nếu dữ liệu có quá nhiều data point thì sẽ phức tạp khi sử dụng
+
+**TRONG SKLEAR:**
+-	Sẽ có Class dành cho 2 bài toán sklearn.svm.SVC và  sklearn.svm.SVR
 
 
 
