@@ -237,18 +237,19 @@ Trong đó:
 - Đối với bài toán **Classification** thì cách thức kết hợp là sử dụng **Majority vote**. 
 ##### 6.1.1. Majority Vote
 - Các vote nhiều nhất của từng **Decision** sẽ được chọn vào **Final Prediction** (Dự đoán cuối) </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/majority_voting.jpg) </br>
 
 **GIẢ SỬ:** Ứng dụng vào bài toán phân loại chó, mèo. </br>
 
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/majority_voting_ex.jpg.png) </br>
 #### 6.2. Regression
 - Đối với bài toán **Regression** thì sẽ sử dụng **Averaging**. </br>
 ##### 6.2.1. Averaging
 - Lấy giá trị trung bình của các Decision Tree sẽ được cho vào **Final Prediction** (Dự đoán cuối) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/averaging.jpg.png) </br>
 
 **GIẢ SỬ:** Ứng dụng vào bài toán mật độ ảnh hưởng ABC. </br>
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/overfitting.png) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/averaging_ex.png) </br>
 
 
 
