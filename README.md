@@ -161,7 +161,7 @@ $$
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/GaussianNaiveBayes.png) </br>
 -	Nếu input đầu vào là biến liên tục và có thêm giả thuyết về Bayes. </br>
 
-**TÌNH HUỐNG:** Ta đã học các thuật toán về hồi quy và phân loại bây giờ ta sẽ học các thuật toán áp dụng cho cả 2 thuật toán này </br>
+**TÌNH HUỐNG:** Ta đã học các thuật toán về hồi quy và phân loại bây giờ ta sẽ học các thuật toán áp dụng cho cả 2 thuật toán này 
 
 ### 5. Decision Tree
 -	Mở đầu là một thuật toán dễ giải thích và trực quan nhất trong ML </br>
