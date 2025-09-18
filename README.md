@@ -1,6 +1,6 @@
 # TÌM HIỂU TẤT CẢ CÁC THUẬT TOÁN MACHINE LEARING
 ## I.	Supervised Learning
-### 1.	Linear Regression (Hồi quy tuyến tính)
+### 1. Linear Regression (Hồi quy tuyến tính)
 -	Đây là thuật toán tìm ra mối quan hệ tuyến tính tồn tại $1$-$N$ input **X** và output **Y**.
 -	Mối quan hệ tuyến tính là mối quan hệ bậc 1 ($y = ax + b$) giữa 2 biến **X**, **Y**.  </br>
 ⟶ Dựa vào đó để đưa ra kết quả **Y** dựa vào đầu vào **X**. </br>
@@ -33,7 +33,7 @@ $B$ = 5: Nếu tăng giờ học lên 1 giờ thì số điểm sẽ tăng 5; th
 **Giả sử:**  </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/chart_linear_regression_difficult.png) </br>
 ⟶ Ta có thể thấy bộ dự liệu rắc rối này không thể đồng bộ thành một đường thẳng có giá trị TB MIN ($X, Y$ quá lệch nhau) </br>
-### 2.	Polynomial Regression (Đa thức)
+### 2. Polynomial Regression (Đa thức)
 - Đây được coi là bản cải tiến của linear do có sự xuất hiện của các phần tử bậc $1, 2, … N$. Sử dụng khi chúng ta muốn biết giá trị $N$ là bao nhiêu.
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/polynomial.jpeg)  </br>
 So sánh Simple linear vs Polynomial Regresstion: </br>
@@ -97,7 +97,7 @@ $$
 
 **TÌNH HUỐNG:** Tập trainning $Y$ có giá trị $[-∞, +∞]$, và nó phục vụ cho bài toán Linear. Vậy nếu ta muốn áp dụng thuật toán này vô **Classification (Binary Classification)** và nó có giá trị output $[0, 1]$.
 
-### 3.	Logistic Regression
+### 3. Logistic Regression
 -	Ý tưởng của bài toán này là thực hiện việc ánh xạ Y sao cho nó nằm trong khoảng $[0, 1]$. Sau đó đặt một giá trị ngưỡng ($p$). Nếu các giá trị output $> p$ thì sẽ ở class số 1 và output $< p$ sẽ ở class 0. </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/logistic.webp) </br>
 -	Thuật toán **Logistic Regression** dựa vào thuật toán **Linear Regression** tạo ra output và cho output đó đi qua **Sigmoid function**. </br>
@@ -274,7 +274,7 @@ Bảng so sánh Decision Tree & Random Forest:
 | **Mức độ giải thích** | **Cao** (dễ truy vết đường đi từ Root node → leaf node). | **Thấp hơn DT**; sau khi có dự đoán cuối vẫn có thể giải thích nhưng khó khăn. |
 | **Tài nguyên & thời gian** | — | **Tiêu tốn hơn DT** (tài nguyên & thời gian). |
 
-## 7. Support Vector Machine
+### 7. Support Vector Machine
 -	Đây là một thuật toán phức tạp trong Basic ML.
 -	Mục tiêu cho bài toán Classification là tìm ra một đường phân cách tốt nhất để phân chia các điểm dữ liệu thuộc về các class khác nhau trong không gian đa chiều </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/SVM.png) </br>
@@ -323,7 +323,7 @@ TỰ TÌM HIỂU HOẶC TÌM XEM CÓ  VIDEO HƯỚNG DẪN
 
 **TÌNH HUỐNG:** Vậy có thuật toán nào không cần thông qua training mà trực tiếp sử dụng data point vào quá trình dự đoán?
 
-## 8. K-Nearest Neighbors
+### 8. K-Nearest Neighbors
 -	Không như các model ML khác, thuật toán này sử dụng trực tiếp data point trong dataset đi dự đoán các data point mới.
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/k_nearest.png) </br>
 
@@ -356,6 +356,139 @@ TỰ TÌM HIỂU HOẶC TÌM XEM CÓ  VIDEO HƯỚNG DẪN
 -	Việc áp dụng các mô hình đơn giản có độ chính xác thấp thành mô hình phức tạp có độ chính xác cao 
 
 ## II. Ensemble Learning (Tổng hợp)
+
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/ensemble_model.png) </br>
+
+### 1. Bagging 
+
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/bagging.jpg) </br>
+
+### 2. Boosting
+
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/boosting.png) </br>
+
+-	Trongg  Boosting thì mô hình đầu tiên sẽ được huấn luyện trên toàn bộ tập dữ liệu sau đó sẽ đưa ra dự đoán cho từng data point một, tiếp đến mô hình 2 sẽ  cũng áp dụng trên toàn bộ tập dữ liệu nhưng tập trung đối với các data point sai, áp dụng tuần tự đến mô hình cuối cùng.
+
+### 3. Voting
+
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/voting.png) </br>
+
+#### 3.1 Hard Voting
+
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/hard_voting.png) </br>
+
+- Đối với bài toán classification thì dựa vào Majority vote để tổng hợp và đưa ra dự đoán cuối
+
+#### 3.2 Soft Voting
+
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/soft_voting.png) </br>
+
+- Thay vì đưa ra dự đoán cụ thể, thì sẽ đưa ra dự đoán xác suất
+
+### 4. Stacking
+
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/stacking.png) </br>
+
+- Cách thức thực hiện:
+    -   Chia dataset gốc thành 2 bộ **Train** và **Validation**
+    -   Huấn luyện các Base models với bộ train
+    -   Đưa các Base models này vào **Validation**
+    - Các dự đoán của Base models trong **Validation** sẽ là input để huấn luyện meta model (các model đơn giản không quá phức tạp)
+    - Với input này thì meta model sẽ kết hợp các dự đoán của base models để đưa ra dự đoán cuối 
+
+Bảng so sánh tổng quan:
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Tính chất</th>
+    <th>Bagging</th>
+    <th>Boosting (XGBoost)</th>
+    <th>Voting</th>
+    <th>Stacking</th>
+  </tr>
+
+  <tr>
+    <td>Huấn luyện</td>
+    <td>Song song</td>
+    <td>Tuần tự</td>
+    <td>Song song</td>
+    <td>Song song</td>
+  </tr>
+
+  <tr>
+    <td>Cách huấn luyện</td>
+    <td>Trên nhiều mô hình con</td>
+    <td>Trên toàn bộ dữ liệu</td>
+    <td>Trên toàn bộ dữ liệu</td>
+    <td>
+      Chia 2 nhóm:<br>
+      + Base models<br>
+      + Meta models
+    </td>
+  </tr>
+
+  <tr>
+    <td>Loại</td>
+    <td>
+      Giống nhau (<i>Weak models</i>)<br>
+      =&gt; Độ chính xác thấp và dễ overfitting<br>
+      (<b>Low Bias</b> &amp; <b>High Variance</b>)
+    </td>
+    <td></td>
+    <td>Khác nhau (DT, SVM, ...)</td>
+    <td>
+      + <b>Base models</b> thuộc nhiều loại khác nhau.<br>
+      + <b>Meta models</b> chỉ một loại đơn giản.
+    </td>
+  </tr>
+
+  <tr>
+    <td>Classification</td>
+    <td></td>
+    <td></td>
+    <td><b>Majority</b></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Regression</td>
+    <td>
+      <b>Averaging</b> (Mean không trọng số) ⇒ các mô hình con bình đẳng khi dự đoán.
+    </td>
+    <td>
+      <b>Averaging</b> (Mean có trọng số) ⇒ mô hình con có trọng số/tầm quan trọng khác nhau.
+    </td>
+    <td><b>Averaging</b></td>
+    <td><b>Averaging</b></td>
+  </tr>
+
+  
+</table>
+
+
+**ƯU ĐIỂM:**	
+- Độ chính xác cao so với các mô hình đơn lẻ
+
+**NHƯỢC ĐIỂM:**	
+- Rất chậm vì phải huấn luyện nhiều mô hình con khác
+- Độ giải thích thấp vì mỗi mô hình sẽ đưa ra các dự đoán khác nhau.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
