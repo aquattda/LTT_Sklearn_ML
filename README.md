@@ -220,7 +220,6 @@ Trong đó:
 - Thực hiện việc tìm các ngưỡng tách (trên feature) làm sao cho độ hỗn tạp của nhãn sau khi tách giảm nhiều nhất. </br>
 - Công thức markdown </br>
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/entropy.png) </br>
-
 **Nhược điểm:** 
 - Dễ bị **Overfitting** ( đặc biệt là cây quá nhiều bậc)	 
 - Chỉ một thay đổi nhỏ của dữ liệu sẽ ảnh hưởng lớn đến cấu trúc của toàn bộ cây.
@@ -260,6 +259,7 @@ Trong đó:
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/boostrapping.png) </br>
 
 **GIẢ SỬ:**
+
 ![alt text](github.com/aquattda/LTT_Sklearn_ML/blob/main/images/boostrapping_ex.png) </br>
 
 Bảng so sánh Decision Tree & Random Forest:
@@ -325,6 +325,7 @@ TỰ TÌM HIỂU HOẶC TÌM XEM CÓ  VIDEO HƯỚNG DẪN
 
 ### 8. K-Nearest Neighbors
 -	Không như các model ML khác, thuật toán này sử dụng trực tiếp data point trong dataset đi dự đoán các data point mới.
+
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/k_nearest.png) </br>
 
 **LƯU Ý:**
