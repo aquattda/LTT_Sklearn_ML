@@ -482,7 +482,7 @@ Bảng so sánh tổng quan:
 
 **GIẢ SỬ:** Minh họa với $k=2$
 
-![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/k_means_clusterinbg_ex.jpg) </br>
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/k_means_clusterinbg_ex.jpg.png) </br>
 
 - Quá trình:
   -	Đầu tiên cần chọn 2 điểm ngẫu nhiên trong không gian làm điểm trung tâm của các cụm.
