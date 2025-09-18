@@ -356,37 +356,37 @@ TỰ TÌM HIỂU HOẶC TÌM XEM CÓ  VIDEO HƯỚNG DẪN
 -	Các thuật toán đều là thuật toán đơn lẻ, ngoại lệ là Random Forest dùng tổng hợp các Decision Tree lại với nhau.
 -	Việc áp dụng các mô hình đơn giản có độ chính xác thấp thành mô hình phức tạp có độ chính xác cao 
 
-## II. Ensemble Learning (Tổng hợp)
+### 9. Ensemble Learning (Tổng hợp)
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/ensemble_model.png) </br>
 
-### 1. Bagging 
+#### 9.1. Bagging 
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/bagging.jpg) </br>
 
-### 2. Boosting
+#### 9.2. Boosting
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/boosting.png) </br>
 
 -	Trongg  Boosting thì mô hình đầu tiên sẽ được huấn luyện trên toàn bộ tập dữ liệu sau đó sẽ đưa ra dự đoán cho từng data point một, tiếp đến mô hình 2 sẽ  cũng áp dụng trên toàn bộ tập dữ liệu nhưng tập trung đối với các data point sai, áp dụng tuần tự đến mô hình cuối cùng.
 
-### 3. Voting
+#### 9.3. Voting
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/voting.png) </br>
 
-#### 3.1 Hard Voting
+##### 9.3.1 Hard Voting
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/hard_voting.png) </br>
 
 - Đối với bài toán classification thì dựa vào Majority vote để tổng hợp và đưa ra dự đoán cuối
 
-#### 3.2 Soft Voting
+##### 9.3.2 Soft Voting
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/soft_voting.png) </br>
 
 - Thay vì đưa ra dự đoán cụ thể, thì sẽ đưa ra dự đoán xác suất
 
-### 4. Stacking
+#### 9.4. Stacking
 
 ![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/stacking.png) </br>
 
@@ -474,10 +474,28 @@ Bảng so sánh tổng quan:
 - Rất chậm vì phải huấn luyện nhiều mô hình con khác
 - Độ giải thích thấp vì mỗi mô hình sẽ đưa ra các dự đoán khác nhau.
 
+## II. Unsupervised Learning
+### 1. K-Means Clustering
+-	Phân các data point thành K cụm khác nhau sao cho các cụm cân bằng nhau và mỗi cụm sẽ khác nhau
 
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/k_means_clusterinbg.jpg) </br>
 
+**GIẢ SỬ:** Minh họa với $k=2$
 
+![alt text](https://github.com/aquattda/LTT_Sklearn_ML/blob/main/images/k_means_clusterinbg_ex.jpg) </br>
 
+- Quá trình:
+  -	Đầu tiên cần chọn 2 điểm ngẫu nhiên trong không gian làm điểm trung tâm của các cụm.
+  -	Tiếp đến sẽ gán các data point vào 2 điểm này để xem các data point này gần với điểm trung tâm của cụm nào hơn.,
+  -	Thứ 3, ta cần tính toán lại tọa độ trung tâm của mỗi cụm dựa vào tính tọa độ TB của các điểm dữ liệu
+  -	Cuối cùng ta sẽ lặp lại bước 2, 3 sao cho các điểm trung tâm của các cụm không còn thay đổi vị trí đáng kể hoặc các điểm dữ liệu không còn thay đổi cụm nữa
+
+**ƯU ĐIỂM:**
+-	Dễ hiểu, sử dụng và trực quan hóa
+
+**NHƯỢC ĐIỂM:**
+-	Việc chọn K để tối ưu không dễ dàng
+-	Việc khởi tạo các cụm trung tâm không tốt sẽ dẫn đến dự đoán xấu và hội tụ chậm
 
 
 
